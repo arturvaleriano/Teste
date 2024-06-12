@@ -1,0 +1,57 @@
+Curso N8N + AI
+
+
+O que é o N8N?:
+
+- É uma plataforma "open source", ou seja, é possível baixar o código deles, verificar e se hospedar onde acharmos melhor
+- Sendo uma ferramenta open source podemos usá-la pelo próprio site do N8N (n8n.io) ou "Self Hosted" que seria você baixar o código do N8N (baixar o programa/software) no seu PC ou em qualquer outro PC e usar de qualquer outro lugar em um servidor.
+- Nesse curso aprenderemos a usar o N8N self hosted e para isso teremos 3 opções: VPS (Virtual Private Server - Quando você compra um servidor virtual em algum lugar. É basicamente um PC virtual na nuvem de alguém); Railway (é um tipo de VPS, mas é "autoregulado) e Localhost (é o próprio PC, seja o seu ou não) 
+
+- É uma ferramenta de automação que usa "nós" (NODES) e "workflows". Dentro dessa plataforma é possível ter vários workflows, ou seja, fluxos de trabalho automatizados, formados por vários nós que seriam os pequenos pedaços de um fluxo.
+- Vale lembrar que os nós existêntes nos fluxos agem em sequência. Em outras palavras, os nós ou blocos seguem uma sequência ORDENADA de ações/demandas/ordens
+- É uma ferramenta que une a característica do "Code" (literalmente: código, ou seja, programação em diversas linguagens) e do "No Code" (Literalmente: sem código, ou seja, é possível criar automações sem o uso de nenhuma linguagem de programação)
+- Com relação ao aspecto No Code - que é o mais presente de certa forma - o N8N funciona com INTEGRAÇÕES, ou seja, a plataforma N8N tem a capacidade de integrar nos fluxos de trabalho outras ferramentas para realizar uma automação. Por exemplo, integrar em um único fluxo ferramentas de análise de dados, serviços de nuvem, ferramentas usadas para a construção de planilhas e dashboards para receber dados de uma nuvem e analisá-los numéricamente. Essas integrações são, justamente, os nós.
+- Observação: Caso não exista uma ferramenta na lista de integrações do N8N, é possível usar API's
+
+Usando o N8N:
+
+*Áreas:
+
+- Workflows: É a área inicial do N8N e onde estarão os fluxos de automação criados por nós;
+- Templates: É a área onde existem projetos já prontos que podemos usar e modificar de acordo com nossas necessidades, ou seja, não é preciso começar um projeto do zero. Para ser mais preciso, ao clicar em templates seremos redirecionados para uma página dentro do site do N8N na qual existem vários fluxos já feitos;
+- Credentials: É onde colocaremos nossas credenciais. O que é uma credencial? Como o N8N trabalha com diversas ferramentas usadas como nós e algumas não estão integradas em seu "banco de dados", é necessário ter acesso à elas por meio de uma API (é a conexão externa com outras plataformas) que por sua vez terá um acesso especial. Esse acesso especial é a credencial. Todas as vezes que for preciso fazer uso de uma ferramenta que precisa desse acesso especial, a credencial que estiver guardada nessa área será usada automaticamente;
+- Variables: Não as usaremos, pois elas só estão disponíveis no plano Enterprise, e
+- All Executions: Nessa área estarão todos os nossos fluxos já prontos e em execução
+
+*Criando workflows:
+
+- Tudo começa no "Canva" que traduzindo seria a tela de pintura à óleo vazia que era usada pelos pintores. É onde criaremos, efetivamente, nossas automações.
+- Para começar qualquer automação é preciso adicionar um "trigger" ou gatilho, os quais são:
+@ On app event: Nesse caso, estamos determinando que para iniciar o fluxo UM EVENTO DENTRO DE UM APP DEVE ACONTECER;
+@ On a schedule: Determinamos um momento específico para que o fluxo seja disparado;
+@ On webhook call;
+@ On form submission: É um formulário gerado pelo próprio N8N que é enviado para um lead (possível comprador/cliente) e quando esse lead confirmar que respondeu o formulário o fluxo dispara;
+@ Manually: Podemos disparar manualmente;
+@ When called by another workflow: Dispara quando outro workflow der esse comando, e
+@ Other ways: Nesse caso existem outro modos para disparar o fluxo.
+
+- Uma vez adicionado o gatilho desejado criamos um "nó gatilho" (TRIGGER NODE); a partir daí estará a nossa disposição outros tipos de nós.
+- Ao lado do gatilho veremos o símbolo de adição (+), clicando nele teremos acesso a lista de nós possíveis, qual seja:
+@ Action in an app: Literalmente, será executada uma ação em um app; e é aqui que poderemos ver todas as integrações que o N8N tem;
+@ Data transformation: Nessa opção vemos todas as possibilidades de manipulação de dados; 
+@ Flow: Aqui nós iremos determinar os caminhos que serão seguidos pelo fluxo e as condições que guiarão o fluxo;
+@ Files: Diz respeito a todo tratamento relacionado a arquivos 
+@ Core:
+@ Advanced AI: Faz a integração de vários tipos de IA's
+@ Add another trigger:
+
+- Todos os nós funcionam da mesma forma, por isso sabendo 5 ou 6 já possível construir automações
+- Vamos analisar mais a fundo como os nós funcionam, mas antes devemos destacar que os dados 	dentro dos nós são apresentados em formato TABLE; JSON e SCHEMA
+- Para configurar ou analisar a configuração de um nó basta clicar no mesmo duas vezes no nó em questão. Dessa forma nós entramos dentro do nó.
+- Dentro do nó temos 3 campos: Input; Parameters e Output, vejamos:
+@ Input: No input estão todos os dados que o nó está recebendo de nós anteriores;
+@ Parameters: É aonde faremos todo o tratamento desses dados de acordo com as funcionalidades do nó que recebe esses dados, e
+	- Condições: Os dados inclusos nesse campo são lidos em JAVA SCRIPT e é aqui que realizaremos a maior parte do tratamento dos dados;
+	- Propriedades: Nesse campo faremos configurações adicionais para deixar o tratamento mais objetivo.
+@ Output: Vemos o resultado do tratamento dado às informações recebidas
+* O nó gatilho tem um layout/apresentação diferente!!!!!!
