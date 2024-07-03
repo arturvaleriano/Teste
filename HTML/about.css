@@ -1,0 +1,50 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: papayawhip;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    text-align:justify;
+    line-height: 1.5;
+    word-spacing: 1;
+    margin-left: 1.5%;
+    margin-right: 1%;
+}
+
+.nav{
+    list-style: none;
+    padding: 0.5rem;
+    text-align: right;
+    margin: 0%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+li{
+    display: inline-block;
+    margin-inline: 0.5rem;
+    background: rgb(30, 160, 241);
+    padding: 0.5rem;
+    
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover, li a:focus{
+    text-decoration: underline;
+}
+
+dl{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 40%; 
+}

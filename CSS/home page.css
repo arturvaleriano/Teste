@@ -1,0 +1,35 @@
+html {
+    font-size: 22px;
+}
+
+body {
+    
+}
+
+h1, h2 {
+    color: orangered;
+    font-family: 'Courier New';
+    border: 1px solid black;
+}
+
+p {
+    color: blue;
+}
+
+p span{
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+.highlight{
+    text-transform: uppercase;
+    background-color: pink;
+}
+
+.red{
+    color: red;
+}
+
+#third{
+    font-style: italic;
+}
